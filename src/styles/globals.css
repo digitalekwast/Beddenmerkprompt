@@ -1,0 +1,266 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Bommel & Bach Brand Colors */
+  --warm-white: #FAF7F2;
+  --deep-charcoal: #2C2C2C;
+  --warm-taupe: #C4B5A0;
+  --sage-green: #8B9B8E;
+  
+  /* Semantic Colors */
+  --success: #7A9B7F;
+  --warning: #C89B6F;
+  --error: #B87A6F;
+  
+  /* Gray Scale */
+  --gray-900: #2C2C2C;
+  --gray-700: #4A4A4A;
+  --gray-500: #8B8B8B;
+  --gray-300: #C4C4C4;
+  --gray-100: #E8E8E8;
+  --gray-50: #F5F5F5;
+  
+  /* Shadcn Compatibility Tokens */
+  --font-size: 16px;
+  --background: #FAF7F2;
+  --foreground: #2C2C2C;
+  --card: #FAF7F2;
+  --card-foreground: #2C2C2C;
+  --popover: #FAF7F2;
+  --popover-foreground: #2C2C2C;
+  --primary: #C4B5A0;
+  --primary-foreground: #2C2C2C;
+  --secondary: #2C2C2C;
+  --secondary-foreground: #FAF7F2;
+  --muted: #F5F5F5;
+  --muted-foreground: #8B8B8B;
+  --accent: #8B9B8E;
+  --accent-foreground: #2C2C2C;
+  --destructive: #B87A6F;
+  --destructive-foreground: #FAF7F2;
+  --border: rgba(44, 44, 44, 0.2);
+  --input: transparent;
+  --input-background: #FAF7F2;
+  --switch-background: #C4C4C4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --ring: rgba(44, 44, 44, 0.1);
+  --chart-1: #C4B5A0;
+  --chart-2: #8B9B8E;
+  --chart-3: #7A9B7F;
+  --chart-4: #C89B6F;
+  --chart-5: #B87A6F;
+  --radius: 0.5rem;
+  --sidebar: #FAF7F2;
+  --sidebar-foreground: #2C2C2C;
+  --sidebar-primary: #C4B5A0;
+  --sidebar-primary-foreground: #2C2C2C;
+  --sidebar-accent: #8B9B8E;
+  --sidebar-accent-foreground: #2C2C2C;
+  --sidebar-border: #E8E8E8;
+  --sidebar-ring: rgba(44, 44, 44, 0.1);
+}
+
+.dark {
+  --background: #2C2C2C;
+  --foreground: #FAF7F2;
+  --card: #2C2C2C;
+  --card-foreground: #FAF7F2;
+  --popover: #2C2C2C;
+  --popover-foreground: #FAF7F2;
+  --primary: #C4B5A0;
+  --primary-foreground: #2C2C2C;
+  --secondary: #4A4A4A;
+  --secondary-foreground: #FAF7F2;
+  --muted: #4A4A4A;
+  --muted-foreground: #8B8B8B;
+  --accent: #8B9B8E;
+  --accent-foreground: #FAF7F2;
+  --destructive: #B87A6F;
+  --destructive-foreground: #FAF7F2;
+  --border: rgba(250, 247, 242, 0.2);
+  --input: #4A4A4A;
+  --ring: rgba(250, 247, 242, 0.1);
+  --sidebar: #2C2C2C;
+  --sidebar-foreground: #FAF7F2;
+  --sidebar-primary: #C4B5A0;
+  --sidebar-primary-foreground: #2C2C2C;
+  --sidebar-accent: #4A4A4A;
+  --sidebar-accent-foreground: #FAF7F2;
+  --sidebar-border: #4A4A4A;
+  --sidebar-ring: rgba(250, 247, 242, 0.1);
+}
+
+@theme inline {
+  --color-warm-white: var(--warm-white);
+  --color-deep-charcoal: var(--deep-charcoal);
+  --color-warm-taupe: var(--warm-taupe);
+  --color-sage-green: var(--sage-green);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-[#FAF7F2] text-[#2C2C2C];
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+}
+
+/**
+ * Bommel & Bach Typography System
+ * Custom typography that overrides defaults
+ */
+@layer base {
+  html {
+    font-size: var(--font-size);
+  }
+  
+  /* Display & Headings - Don't apply if parent has text class */
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-weight: var(--font-weight-bold);
+      line-height: 1.125;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-weight: var(--font-weight-bold);
+      line-height: 1.167;
+      letter-spacing: -0.005em;
+    }
+
+    h3 {
+      font-weight: var(--font-weight-medium);
+      line-height: 1.222;
+      letter-spacing: 0;
+    }
+
+    h4 {
+      font-weight: var(--font-weight-medium);
+      line-height: 1.333;
+      letter-spacing: 0;
+    }
+
+    p {
+      font-weight: var(--font-weight-normal);
+      line-height: 1.625;
+      letter-spacing: 0;
+    }
+
+    label {
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      letter-spacing: 0.3px;
+    }
+
+    button {
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      letter-spacing: 0.3px;
+    }
+
+    input {
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+  }
+}
+
+/* Custom utility classes for Bommel & Bach */
+@layer utilities {
+  .text-warm-white {
+    color: #FAF7F2;
+  }
+  
+  .text-deep-charcoal {
+    color: #2C2C2C;
+  }
+  
+  .text-warm-taupe {
+    color: #C4B5A0;
+  }
+  
+  .text-sage-green {
+    color: #8B9B8E;
+  }
+  
+  .bg-warm-white {
+    background-color: #FAF7F2;
+  }
+  
+  .bg-deep-charcoal {
+    background-color: #2C2C2C;
+  }
+  
+  .bg-warm-taupe {
+    background-color: #C4B5A0;
+  }
+  
+  .bg-sage-green {
+    background-color: #8B9B8E;
+  }
+  
+  .border-deep-charcoal {
+    border-color: #2C2C2C;
+  }
+  
+  .hover\:bg-warm-taupe-dark:hover {
+    background-color: #B8A890;
+  }
+  
+  .hover\:bg-deep-charcoal:hover {
+    background-color: #2C2C2C;
+  }
+  
+  .hover\:text-warm-white:hover {
+    color: #FAF7F2;
+  }
+  
+  .hover\:text-warm-taupe:hover {
+    color: #C4B5A0;
+  }
+}
