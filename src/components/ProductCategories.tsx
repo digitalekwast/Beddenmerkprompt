@@ -46,16 +46,28 @@ export function ProductCategories() {
   ];
 
   return (
-    <section className="w-full bg-warm-white py-16">
+    <section className="w-full bg-warm-white py-24">
       <div className="max-w-[1200px] mx-auto px-16 md:px-16 sm:px-6">
         {/* Header */}
-        <div className="mb-12">
-          <h2
-            className="text-deep-charcoal"
-            style={{ fontSize: '28px', fontWeight: 600, lineHeight: '36px' }}
+        <div className="mb-16 text-center">
+          <div
+            className="text-sage-green uppercase mb-4"
+            style={{ fontSize: '12px', fontWeight: 600, letterSpacing: '2px' }}
           >
-            Productcategorieën
+            AL ONZE PRODUCTEN ZIJN EIGEN ONTWERPEN
+          </div>
+          <h2
+            className="text-deep-charcoal mb-4"
+            style={{ fontSize: '36px', fontWeight: 700, lineHeight: '44px' }}
+          >
+            Ontdek onze collectie
           </h2>
+          <p
+            className="text-deep-charcoal/70 max-w-[600px] mx-auto"
+            style={{ fontSize: '16px', fontWeight: 400, lineHeight: '26px' }}
+          >
+            Van boxsprings tot matrassen – elk product is door ons bedacht en ontwikkeld
+          </p>
         </div>
 
         {/* Categories Grid */}

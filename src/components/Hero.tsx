@@ -27,13 +27,25 @@ export function Hero({ imageUrl }: HeroProps) {
       <div className="relative h-full flex items-center">
         <div className="ml-40 md:ml-40 sm:ml-6 max-w-[600px] px-6">
           <div className="flex flex-col gap-6">
-            {/* Eyebrow */}
-            <p
-              className="text-warm-white/90 uppercase tracking-[1px]"
-              style={{ fontSize: '14px', lineHeight: '16px', fontWeight: 400, letterSpacing: '1px' }}
-            >
-              NEDERLANDS VAKMANSCHAP SINDS 2019
-            </p>
+            {/* Eyebrow - Met emphasis op EIGEN MERK */}
+            <div className="flex flex-col gap-3">
+              <div className="inline-flex items-center gap-3 self-start">
+                <div className="px-4 py-2 bg-sage-green rounded-full">
+                  <span
+                    className="text-warm-white uppercase"
+                    style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '2px' }}
+                  >
+                    100% EIGEN MERK
+                  </span>
+                </div>
+                <p
+                  className="text-warm-white/90 uppercase"
+                  style={{ fontSize: '13px', lineHeight: '16px', fontWeight: 500, letterSpacing: '1.5px' }}
+                >
+                  NEDERLANDS VAKMANSCHAP SINDS 2019
+                </p>
+              </div>
+            </div>
 
             {/* Headline - BOLD */}
             <h1
@@ -57,7 +69,7 @@ export function Hero({ imageUrl }: HeroProps) {
                 fontWeight: 400,
               }}
             >
-              Kwaliteit vergelijkbaar met Auping, voor €2.500-€4.000. Ontdek eerlijke luxe.
+              Zelf ontworpen en met de hand gemaakt in Staphorst. Kwaliteit vergelijkbaar met Auping, voor €2.500-€4.000.
             </p>
 
             {/* Button Group */}

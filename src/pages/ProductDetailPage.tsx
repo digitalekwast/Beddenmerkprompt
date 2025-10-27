@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { Check, ArrowLeft, Package, Truck, Shield, Heart, ChevronLeft, ChevronRight, RotateCw, ZoomIn } from 'lucide-react';
 import { useState, useRef } from 'react';
+import { ShowroomAppointment } from '../components/ShowroomAppointment';
 
 export function ProductDetailPage() {
   const { id } = useParams();
@@ -508,6 +509,9 @@ export function ProductDetailPage() {
           </div>
         </div>
       </section>
+
+      {/* Showroom Appointment Section */}
+      <ShowroomAppointment />
     </div>
   );
 }

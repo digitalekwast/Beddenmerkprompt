@@ -1,5 +1,6 @@
 import { PageHeader } from '../components/PageHeader';
 import { ProductCard } from '../components/ProductCard';
+import { ShowroomAppointment } from '../components/ShowroomAppointment';
 import { FinalCTA } from '../components/FinalCTA';
 
 export function BoxspringsPage() {
@@ -90,9 +91,9 @@ export function BoxspringsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="PRODUCTEN"
+        eyebrow="100% EIGEN ONTWERPEN"
         title="Boxspring sets"
-        description="Ontdek onze complete boxspring sets. Van configureerbare luxe tot direct leverbare comfort – voor ieder wat wils. Alle boxsprings worden ambachtelijk vervaardigd in Nederland."
+        description="Ontdek onze eigen ontworpen boxspring sets. Van configureerbare luxe tot direct leverbare comfort – elk bed is door ons bedacht en met de hand gemaakt in onze werkplaats in Staphorst."
       />
 
       <section className="w-full bg-warm-white py-16">
@@ -135,6 +136,9 @@ export function BoxspringsPage() {
           </div>
         </div>
       </section>
+
+      {/* Showroom Appointment */}
+      <ShowroomAppointment />
 
       <FinalCTA />
     </>

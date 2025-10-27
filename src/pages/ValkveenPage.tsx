@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
 import { ProductCard } from '../components/ProductCard';
+import { ShowroomAppointment } from '../components/ShowroomAppointment';
 import { FinalCTA } from '../components/FinalCTA';
 
 export function ValkveenPage() {
@@ -80,26 +81,34 @@ export function ValkveenPage() {
   return (
     <>
       <PageHeader
-        eyebrow="COLLECTIE"
+        eyebrow="EIGEN ONTWERP - COLLECTIE VALKEVEEN"
         title="Valkeveen"
-        description="In 5 stappen naar jouw droomboxspring. De Valkeveen collectie biedt voor iedereen wat wils, variërend van eenvoud tot luxe. Volledig configureerbaar volgens jouw wensen."
+        description="In 5 stappen naar jouw droomboxspring. Door ons ontworpen en gemaakt in Staphorst. De Valkeveen collectie biedt voor iedereen wat wils, variërend van eenvoud tot luxe. Volledig configureerbaar volgens jouw wensen."
       />
 
       {/* Configuration Process Section */}
       <section className="w-full bg-warm-white py-24">
         <div className="max-w-[1200px] mx-auto px-16 md:px-16 sm:px-6">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sage-green/15 rounded-full mb-6">
+              <span
+                className="text-sage-green uppercase"
+                style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '1.5px' }}
+              >
+                EIGEN ONTWERP - HELEMAAL NAAR JOUW WENS
+              </span>
+            </div>
             <h2
               className="text-deep-charcoal mb-4"
               style={{ fontSize: '36px', fontWeight: 700, lineHeight: '44px' }}
             >
-              Configureer je eigen boxspring
+              Configureer je eigen Valkeveen boxspring
             </h2>
             <p
               className="text-deep-charcoal/70 max-w-[600px] mx-auto"
               style={{ fontSize: '16px', fontWeight: 400, lineHeight: '26px' }}
             >
-              In vijf eenvoudige stappen stel je jouw perfecte boxspring samen
+              In vijf eenvoudige stappen stel je jouw perfecte, door ons gemaakte boxspring samen
             </p>
           </div>
 
@@ -199,6 +208,9 @@ export function ValkveenPage() {
           </div>
         </div>
       </section>
+
+      {/* Showroom Appointment */}
+      <ShowroomAppointment />
 
       <FinalCTA />
     </>

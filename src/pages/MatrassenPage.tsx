@@ -1,6 +1,7 @@
 import { PageHeader } from '../components/PageHeader';
 import { MatrasConfigurator } from '../components/MatrasConfigurator';
 import { ProductCard } from '../components/ProductCard';
+import { ShowroomAppointment } from '../components/ShowroomAppointment';
 import { FinalCTA } from '../components/FinalCTA';
 
 export function MatrassenPage() {
@@ -59,25 +60,33 @@ export function MatrassenPage() {
     <div className="min-h-screen bg-warm-white">
       <PageHeader
         title="Premium Matrassen"
-        subtitle="Vind de perfecte matras voor ultiem slaapcomfort"
+        subtitle="Eigen ontworpen voor perfect slaapcomfort"
         imageUrl="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200"
       />
 
-      {/* Intro Section */}
+      {/* Intro Section - Benadruk eigen ontwerpen */}
       <section className="w-full py-16">
         <div className="max-w-[1000px] mx-auto px-16 md:px-16 sm:px-6">
           <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sage-green/15 rounded-full mb-6">
+              <span
+                className="text-sage-green uppercase"
+                style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '1.5px' }}
+              >
+                100% EIGEN ONTWERPEN
+              </span>
+            </div>
             <h2
               className="text-deep-charcoal mb-4"
               style={{ fontSize: '32px', fontWeight: 700, lineHeight: '40px' }}
             >
-              Matrassen op maat
+              Matrassen door ons ontworpen en gemaakt
             </h2>
             <p
               className="text-deep-charcoal/70 max-w-[700px] mx-auto"
               style={{ fontSize: '18px', lineHeight: '30px' }}
             >
-              Of je nu een losse matras zoekt of een matras voor je boxspring, wij hebben de
+              Elk matras is door ons zelf ontwikkeld en geproduceerd in Staphorst. Of je nu een losse matras zoekt of een matras voor je boxspring, wij hebben de
               perfecte oplossing. Allemaal gemaakt met Nederlands vakmanschap en premium materialen.
             </p>
           </div>
@@ -160,6 +169,9 @@ export function MatrassenPage() {
           </div>
         </div>
       </section>
+
+      {/* Showroom Appointment */}
+      <ShowroomAppointment />
 
       <FinalCTA />
     </div>

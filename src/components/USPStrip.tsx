@@ -1,11 +1,16 @@
-import { CheckCircle, Award, Tag } from 'lucide-react';
+import { CheckCircle, Award, Tag, Lightbulb } from 'lucide-react';
 
 export function USPStrip() {
   const usps = [
     {
+      icon: Lightbulb,
+      label: 'Eigen ontwerpen',
+      description: 'Elk bed is door ons zelf bedacht en ontwikkeld',
+    },
+    {
       icon: CheckCircle,
-      label: 'Nederlandse productie',
-      description: 'Ambachtelijk vervaardigd in onze eigen fabriek',
+      label: 'Eigen productie',
+      description: 'Handgemaakt in onze werkplaats in Staphorst',
     },
     {
       icon: Award,
@@ -15,14 +20,14 @@ export function USPStrip() {
     {
       icon: Tag,
       label: 'Eerlijke prijs',
-      description: 'Geen dure marketing, geen tussenpersonen',
+      description: 'Direct van maker, geen tussenhandel',
     },
   ];
 
   return (
     <section className="w-full bg-warm-white py-16">
       <div className="max-w-[1200px] mx-auto px-16 md:px-16 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {usps.map((usp, index) => {
             const Icon = usp.icon;
             return (

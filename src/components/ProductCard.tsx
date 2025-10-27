@@ -34,6 +34,17 @@ export function ProductCard({
           alt={name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
+        
+        {/* Eigen ontwerp badge - altijd zichtbaar */}
+        <div className="absolute top-4 left-4 px-3 py-1.5 bg-deep-charcoal/90 backdrop-blur-sm rounded">
+          <span
+            className="text-warm-white uppercase"
+            style={{ fontSize: '10px', fontWeight: 600, letterSpacing: '1px' }}
+          >
+            Eigen ontwerp
+          </span>
+        </div>
+        
         {inStock && (
           <div className="absolute top-4 right-4 px-3 py-1.5 bg-sage-green/95 backdrop-blur-sm rounded">
             <span

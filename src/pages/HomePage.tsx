@@ -1,5 +1,7 @@
 import { Hero } from '../components/Hero';
 import { USPStrip } from '../components/USPStrip';
+import { BrandStory } from '../components/BrandStory';
+import { CraftsmanshipGallery } from '../components/CraftsmanshipGallery';
 import { InteractiveConfigurator } from '../components/InteractiveConfigurator';
 import { ProductCategories } from '../components/ProductCategories';
 import { FeaturedCollection } from '../components/FeaturedCollection';
@@ -15,10 +17,13 @@ export function HomePage() {
       {/* Hero Section */}
       <Hero imageUrl="https://images.unsplash.com/photo-1693907587800-702409d6c8fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2FuZGluYXZpYW4lMjBiZWRyb29tJTIwbmF0dXJhbCUyMGxpZ2h0fGVufDF8fHx8MTc2MTQ5NTAxNXww&ixlib=rb-4.1.0&q=80&w=1080" />
 
-      {/* USP Strip - Sage Green icons */}
+      {/* USP Strip - 4 USPs including "Eigen ontwerpen" */}
       <USPStrip />
 
-      {/* Interactive Configurator Tool - NEW */}
+      {/* Brand Story - NEW: Benadrukt eigen merk met visuele rijkdom */}
+      <BrandStory />
+
+      {/* Interactive Configurator Tool */}
       <InteractiveConfigurator />
 
       {/* Product Categories */}
@@ -40,6 +45,9 @@ export function HomePage() {
         ctaHref="/collecties/valkeveen"
         imageOnRight={false}
       />
+
+      {/* Craftsmanship Gallery - NEW: Premium foto gallery met veel visuele rijkdom */}
+      <CraftsmanshipGallery />
 
       {/* Vakmanschap Section */}
       <VakmansschapSection imageUrl="https://images.unsplash.com/photo-1758264672363-2123237ea366?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmFmdHNtYW5zaGlwJTIwc2V3aW5nJTIwZGV0YWlsfGVufDF8fHx8MTc2MTU4MjEzNnww&ixlib=rb-4.1.0&q=80&w=1080" />

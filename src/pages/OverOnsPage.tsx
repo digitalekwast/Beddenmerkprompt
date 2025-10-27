@@ -7,18 +7,18 @@ export function OverOnsPage() {
   const values = [
     {
       icon: Factory,
-      title: 'Nederlands kwaliteitsmerk',
-      description: 'Een Nederlands beddenmerkt met oog voor detail. Onze bedden worden met zorg samengesteld volgens de hoogste kwaliteitsstandaarden.',
+      title: '100% eigen merk',
+      description: 'Elk bed is door ons zelf ontworpen en ontwikkeld. Van eerste schets tot eindproduct – alles gebeurt in-house in Staphorst.',
     },
     {
       icon: Award,
-      title: 'Premium kwaliteit',
-      description: 'We gebruiken alleen de beste materialen. Onze boxsprings zijn vergelijkbaar met topmerken als Auping, maar dan voor een eerlijke prijs.',
+      title: 'Eigen productie',
+      description: 'We produceren volledig zelf in onze eigen werkplaats. Dit geeft ons volledige controle over kwaliteit en levertijden.',
     },
     {
       icon: Users,
-      title: 'Persoonlijke service',
-      description: 'Direct contact met ons team. Geen callcenters of tussenpersonen. We denken graag met je mee over de perfecte bedconfiguratie.',
+      title: 'Direct van maker',
+      description: 'Geen tussenpersonen of doorverkopers. Je koopt rechtstreeks bij de mensen die je bed met passie en vakmanschap maken.',
     },
   ];
 
@@ -53,9 +53,9 @@ export function OverOnsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="ONS VERHAAL"
+        eyebrow="100% EIGEN MERK - ONS VERHAAL"
         title="Over Bommel & Bach"
-        description="Premium bedden zonder de premium prijs. Dat is wat ons drijft. Ontdek hoe we dat doen en waarom steeds meer mensen kiezen voor Bommel & Bach."
+        description="Wij zijn geen doorverkoper. Elk bed dat je bij ons koopt, is door ons zelf bedacht, ontworpen en met de hand gemaakt in Staphorst. Dit is ons merk, dit zijn onze creaties."
       />
 
       {/* Mission Section */}
