@@ -222,29 +222,62 @@ export function InteractiveConfigurator() {
           {/* RIGHT: Visual Preview */}
           <div>
             {!showResults ? (
-              <div className="w-full aspect-[4/3] rounded-2xl bg-warm-white p-12 flex flex-col items-center justify-center">
-                <div className="w-30 h-30 mb-6 opacity-30">
-                  <svg
-                    viewBox="0 0 120 120"
-                    fill="none"
-                    className="w-full h-full text-sage-green"
+              <div
+                className="w-full rounded-2xl p-12 shadow-[0px_4px_24px_rgba(44,44,44,0.06)]"
+                style={{
+                  background: 'linear-gradient(180deg, #FAF7F2 0%, rgba(139, 155, 142, 0.06) 100%)',
+                }}
+              >
+                {/* Header */}
+                <div className="mb-6">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-green/10 mb-4">
+                    <span className="text-sage-green" style={{ fontSize: '13px', fontWeight: 500 }}>
+                      Jouw match komt hier
+                    </span>
+                  </div>
+                  <h3
+                    className="text-deep-charcoal mb-2"
+                    style={{ fontSize: '24px', fontWeight: 600 }}
                   >
-                    <rect x="20" y="40" width="80" height="50" rx="4" stroke="currentColor" strokeWidth="2" />
-                    <rect x="30" y="50" width="60" height="30" fill="currentColor" opacity="0.2" />
-                  </svg>
+                    Vind de perfecte boxspring
+                  </h3>
+                  <p
+                    className="text-deep-charcoal/60"
+                    style={{ fontSize: '15px', lineHeight: '24px' }}
+                  >
+                    Beantwoord de vragen en ontdek welk bed perfect bij jou past
+                  </p>
                 </div>
-                <h3
-                  className="text-deep-charcoal mb-3 text-center"
-                  style={{ fontSize: '24px', fontWeight: 500 }}
-                >
-                  Jouw perfecte bed wacht
-                </h3>
-                <p
-                  className="text-deep-charcoal/60 text-center max-w-[360px]"
-                  style={{ fontSize: '16px', lineHeight: '26px' }}
-                >
-                  Vul de vragen in en zie direct welke boxspring perfect bij jou past
-                </p>
+
+                {/* Placeholder Image */}
+                <div className="rounded-xl overflow-hidden mb-6 bg-gray-50">
+                  <img
+                    src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800"
+                    alt="Boxspring voorbeeld"
+                    className="w-full aspect-[4/3] object-cover opacity-40"
+                  />
+                </div>
+
+                {/* Features */}
+                <div className="space-y-3">
+                  {[
+                    'Persoonlijk advies op maat',
+                    'Direct jouw perfecte match',
+                    'Gebaseerd op 1000+ klanten',
+                  ].map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-sage-green/15 flex items-center justify-center">
+                        <Check className="w-3 h-3 text-sage-green" />
+                      </div>
+                      <span
+                        className="text-deep-charcoal/70"
+                        style={{ fontSize: '14px', lineHeight: '20px' }}
+                      >
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             ) : (
               <div

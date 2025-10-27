@@ -17,12 +17,13 @@ export function Navigation() {
   }, []);
 
   const menuItems = [
-    { label: 'Boxspring sets', href: '/boxsprings' },
-    { label: 'Hotelbed sets', href: '/hotelbedden' },
-    { label: 'Collecties', href: '/collecties/valkeveen' },
-    { label: 'Verkooppunten', href: '/verkooppunten' },
-    { label: 'Over ons', href: '/over-ons' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'BOXSPRING SETS', href: '/boxsprings' },
+    { label: 'MATRASSEN', href: '/matrassen' },
+    { label: 'HOTEL BED SETS', href: '/hotelbedden' },
+    { label: 'COLLECTIES', href: '/collecties/valkeveen' },
+    { label: 'VERKOOPPUNTEN', href: '/verkooppunten' },
+    { label: 'OVER ONS', href: '/over-ons' },
+    { label: 'CONTACT', href: '/contact' },
   ];
 
   return (
@@ -35,39 +36,45 @@ export function Navigation() {
             : 'bg-warm-white/80 backdrop-blur-[10px]'
         }`}
       >
-        <div className="px-16 h-20 flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+        <div className="px-16 h-20 flex items-center justify-center">
+          <div className="w-full max-w-[1600px] flex items-center justify-between">
+            {/* Left Menu Items */}
+            <div className="flex items-center gap-8">
+              {menuItems.slice(0, 3).map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="relative text-[13px] leading-[13px] tracking-[0.8px] py-2 text-deep-charcoal hover:text-sage-green transition-colors duration-200 group"
+                  style={{ fontWeight: 500 }}
+                >
+                  {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-sage-green transition-all duration-300 group-hover:w-full" />
+                </Link>
+              ))}
+            </div>
+
+            {/* Center Logo */}
+            <Link to="/" className="flex items-center mx-8">
               <span className="text-[32px] leading-[32px] tracking-[-0.01em]" style={{ fontWeight: 700 }}>
                 Bommel & Bach
               </span>
             </Link>
-          </div>
 
-          {/* Center Menu */}
-          <div className="flex items-center gap-12">
-            {menuItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.href}
-                className="relative text-[15px] leading-[15px] tracking-[0.3px] py-2 text-deep-charcoal hover:text-warm-taupe transition-colors duration-200 group"
-                style={{ fontWeight: 500 }}
-              >
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-warm-taupe transition-all duration-300 group-hover:w-full" />
-              </Link>
-            ))}
+            {/* Right Menu Items */}
+            <div className="flex items-center gap-8">
+              {menuItems.slice(3).map((item) => (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="relative text-[13px] leading-[13px] tracking-[0.8px] py-2 text-deep-charcoal hover:text-sage-green transition-colors duration-200 group"
+                  style={{ fontWeight: 500 }}
+                >
+                  {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-sage-green transition-all duration-300 group-hover:w-full" />
+                </Link>
+              ))}
+            </div>
           </div>
-
-          {/* CTA Button */}
-          <Link
-            to="/verkooppunten"
-            className="h-11 px-6 bg-warm-taupe text-deep-charcoal rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-[#B8A890] hover:shadow-md hover:translate-y-[-1px]"
-            style={{ fontWeight: 500, fontSize: '15px', letterSpacing: '0.3px' }}
-          >
-            Plan showroom bezoek
-          </Link>
         </div>
       </nav>
 

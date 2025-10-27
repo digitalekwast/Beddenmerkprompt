@@ -1,7 +1,10 @@
-import { MapPin, Phone, Clock, ExternalLink, TrendingUp, Users, Award, Building2, Heart, Sparkles } from 'lucide-react';
+import { useState } from 'react';
+import { MapPin, Phone, Clock, ExternalLink, TrendingUp, Users, Award, Building2, Heart, Sparkles, Search, X } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
 
 export function VerkooppuntenPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+
   const dealers = [
     {
       name: 'Bommel & Bach Showroom',
@@ -189,15 +192,74 @@ export function VerkooppuntenPage() {
               Onze dealers
             </h2>
             <p
-              className="text-deep-charcoal/70 max-w-[600px] mx-auto"
+              className="text-deep-charcoal/70 max-w-[600px] mx-auto mb-10"
               style={{ fontSize: '16px', fontWeight: 400, lineHeight: '26px' }}
             >
               Meer dan 20 dealers door heel Nederland
             </p>
+
+            {/* Search Bar - Premium Design */}
+            <div className="max-w-[500px] mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-sage-green" strokeWidth={2} />
+                <input
+                  type="text"
+                  placeholder="Zoek op plaats, postcode of naam..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full h-14 pl-12 pr-12 rounded-xl border-2 border-sage-green/20 bg-warm-white text-deep-charcoal placeholder:text-deep-charcoal/40 focus:outline-none focus:border-sage-green/50 transition-all duration-200"
+                  style={{ fontSize: '16px', fontWeight: 400 }}
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-sage-green/10 hover:bg-sage-green/20 flex items-center justify-center transition-colors"
+                  >
+                    <X className="w-4 h-4 text-sage-green" strokeWidth={2} />
+                  </button>
+                )}
+              </div>
+            </div>
+
+            {/* Results Counter */}
+            {searchQuery && (
+              <p
+                className="text-sage-green mb-4"
+                style={{ fontSize: '14px', fontWeight: 500 }}
+              >
+                {dealers.filter((dealer) => {
+                  const query = searchQuery.toLowerCase();
+                  return (
+                    dealer.name.toLowerCase().includes(query) ||
+                    dealer.city.toLowerCase().includes(query) ||
+                    dealer.address.toLowerCase().includes(query)
+                  );
+                }).length}{' '}
+                {dealers.filter((dealer) => {
+                  const query = searchQuery.toLowerCase();
+                  return (
+                    dealer.name.toLowerCase().includes(query) ||
+                    dealer.city.toLowerCase().includes(query) ||
+                    dealer.address.toLowerCase().includes(query)
+                  );
+                }).length === 1 ? 'dealer gevonden' : 'dealers gevonden'}
+              </p>
+            )}
           </div>
 
+          {/* Dealers Grid with Filtering */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dealers.map((dealer, index) => (
+            {dealers
+              .filter((dealer) => {
+                if (!searchQuery) return true;
+                const query = searchQuery.toLowerCase();
+                return (
+                  dealer.name.toLowerCase().includes(query) ||
+                  dealer.city.toLowerCase().includes(query) ||
+                  dealer.address.toLowerCase().includes(query)
+                );
+              })
+              .map((dealer, index) => (
               <div
                 key={index}
                 className="p-6 bg-warm-white rounded-xl border border-warm-taupe/20 hover:shadow-[0px_4px_16px_rgba(44,44,44,0.08)] transition-all duration-200 hover:border-warm-taupe/40"
@@ -269,6 +331,41 @@ export function VerkooppuntenPage() {
               </div>
             ))}
           </div>
+
+          {/* Empty State */}
+          {searchQuery && dealers.filter((dealer) => {
+            const query = searchQuery.toLowerCase();
+            return (
+              dealer.name.toLowerCase().includes(query) ||
+              dealer.city.toLowerCase().includes(query) ||
+              dealer.address.toLowerCase().includes(query)
+            );
+          }).length === 0 && (
+            <div className="text-center py-16">
+              <div className="w-16 h-16 rounded-full bg-sage-green/10 flex items-center justify-center mx-auto mb-6">
+                <Search className="w-8 h-8 text-sage-green/50" strokeWidth={2} />
+              </div>
+              <h3
+                className="text-deep-charcoal mb-3"
+                style={{ fontSize: '20px', fontWeight: 600, lineHeight: '28px' }}
+              >
+                Geen dealers gevonden
+              </h3>
+              <p
+                className="text-deep-charcoal/60 mb-6 max-w-[400px] mx-auto"
+                style={{ fontSize: '15px', fontWeight: 400, lineHeight: '24px' }}
+              >
+                Probeer een andere zoekterm of verwijder filters om alle dealers te zien.
+              </p>
+              <button
+                onClick={() => setSearchQuery('')}
+                className="inline-flex h-10 px-6 bg-sage-green/10 text-sage-green rounded-lg items-center justify-center hover:bg-sage-green/20 transition-colors"
+                style={{ fontSize: '14px', fontWeight: 500 }}
+              >
+                Toon alle dealers
+              </button>
+            </div>
+          )}
         </div>
       </section>
 

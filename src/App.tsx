@@ -3,6 +3,7 @@ import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { BoxspringsPage } from './pages/BoxspringsPage';
+import { MatrassenPage } from './pages/MatrassenPage';
 import { HotelbeddenPage } from './pages/HotelbeddenPage';
 import { ValkveenPage } from './pages/ValkveenPage';
 import { LechtalPage } from './pages/LechtalPage';
@@ -25,6 +26,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/boxsprings" element={<BoxspringsPage />} />
+          <Route path="/matrassen" element={<MatrassenPage />} />
           <Route path="/hotelbedden" element={<HotelbeddenPage />} />
           <Route path="/collecties/valkeveen" element={<ValkveenPage />} />
           <Route path="/collecties/lechtal" element={<LechtalPage />} />
