@@ -52,7 +52,7 @@ export function SocialProof() {
         {/* CTA Button */}
         <Link
           to="/verkooppunten"
-          className="inline-flex h-12 px-8 border-2 border-deep-charcoal text-deep-charcoal rounded-lg items-center justify-center gap-2 transition-all duration-200 hover:bg-deep-charcoal hover:text-warm-white hover:shadow-md"
+          className="inline-flex h-14 px-10 border-2 border-deep-charcoal text-deep-charcoal rounded-lg items-center justify-center gap-2 transition-all duration-200 hover:bg-deep-charcoal hover:text-warm-white hover:shadow-md"
           style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
         >
           Vind jouw dichtstbijzijnde dealer

@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { Check, ArrowLeft, Package, Truck, Shield, Heart, ChevronLeft, ChevronRight, RotateCw, ZoomIn } from 'lucide-react';
+import { Check, ArrowLeft, Package, Truck, Shield, Heart, ChevronLeft, ChevronRight, RotateCw, ZoomIn, FileText } from 'lucide-react';
 import { useState, useRef } from 'react';
 import { ShowroomAppointment } from '../components/ShowroomAppointment';
 
@@ -358,20 +358,28 @@ export function ProductDetailPage() {
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col gap-4 mb-10 pb-10 border-b border-warm-taupe/20">
+              <div className="flex flex-col gap-3 mb-10 pb-10 border-b border-warm-taupe/20">
+                <Link
+                  to="/offerte-aanvraag"
+                  className="h-14 bg-sage-green text-warm-white rounded-xl flex items-center justify-center gap-2 transition-all duration-200 hover:bg-sage-green/90 hover:shadow-lg hover:translate-y-[-2px]"
+                  style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
+                >
+                  <FileText className="w-5 h-5" />
+                  Plan showroom bezoek
+                </Link>
                 <Link
                   to="/contact"
                   className="h-14 bg-warm-taupe text-deep-charcoal rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-[#B8A890] hover:shadow-lg hover:translate-y-[-2px]"
                   style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
                 >
-                  Configureer volledig
+                  Plan showroom bezoek
                 </Link>
                 <Link
                   to="/verkooppunten"
-                  className="h-14 border-2 border-deep-charcoal text-deep-charcoal rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-deep-charcoal hover:text-warm-white"
+                  className="h-14 border-2 border-sage-green text-sage-green rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-sage-green hover:text-warm-white"
                   style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
                 >
-                  Proefliggen bij dealer
+                  Vind dealer bij jou in de buurt
                 </Link>
               </div>
 
@@ -443,13 +451,13 @@ export function ProductDetailPage() {
                       className="text-deep-charcoal mb-0.5"
                       style={{ fontSize: '14px', fontWeight: 500 }}
                     >
-                      Handgemaakt
+                      Eigen ontwerp
                     </div>
                     <div
                       className="text-deep-charcoal/60"
                       style={{ fontSize: '12px', fontWeight: 400 }}
                     >
-                      In Nederland
+                      Nederlands vakmanschap
                     </div>
                   </div>
                 </div>

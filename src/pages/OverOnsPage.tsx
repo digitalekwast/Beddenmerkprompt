@@ -1,24 +1,24 @@
 import { PageHeader } from '../components/PageHeader';
 import { Check, Users, Factory, Award } from 'lucide-react';
+import { VideoShowcase } from '../components/VideoShowcase';
 import { VakmansschapSection } from '../components/VakmansschapSection';
-import { FinalCTA } from '../components/FinalCTA';
 
 export function OverOnsPage() {
   const values = [
     {
       icon: Factory,
       title: '100% eigen merk',
-      description: 'Elk bed is door ons zelf ontworpen en ontwikkeld. Van eerste schets tot eindproduct – alles gebeurt in-house in Staphorst.',
+      description: 'Elk bed is door ons zelf ontworpen en ontwikkeld. Van eerste schets tot materiaalspecificatie – alles gebeurt in-house in Staphorst.',
     },
     {
       icon: Award,
-      title: 'Eigen productie',
-      description: 'We produceren volledig zelf in onze eigen werkplaats. Dit geeft ons volledige controle over kwaliteit en levertijden.',
+      title: 'Strikte kwaliteitscontrole',
+      description: 'We controleren elk bed persoonlijk volgens onze hoge eisen. Dit geeft ons volledige controle over kwaliteit en afwerking.',
     },
     {
       icon: Users,
-      title: 'Direct van maker',
-      description: 'Geen tussenpersonen of doorverkopers. Je koopt rechtstreeks bij de mensen die je bed met passie en vakmanschap maken.',
+      title: 'Direct van ontwerper',
+      description: 'Geen tussenpersonen of doorverkopers. Je koopt rechtstreeks bij de mensen die je bed met passie en expertise ontwerpen.',
     },
   ];
 
@@ -55,7 +55,7 @@ export function OverOnsPage() {
       <PageHeader
         eyebrow="100% EIGEN MERK - ONS VERHAAL"
         title="Over Bommel & Bach"
-        description="Wij zijn geen doorverkoper. Elk bed dat je bij ons koopt, is door ons zelf bedacht, ontworpen en met de hand gemaakt in Staphorst. Dit is ons merk, dit zijn onze creaties."
+        description="Wij zijn geen doorverkoper. Elk bed dat je bij ons koopt, is door ons zelf bedacht, ontworpen en tot in detail uitgewerkt. Dit is ons merk, dit zijn onze creaties."
       />
 
       {/* Mission Section */}
@@ -101,6 +101,15 @@ export function OverOnsPage() {
           </div>
         </div>
       </section>
+
+      {/* Video Section - NEW */}
+      <VideoShowcase
+        eyebrow="ONS VERHAAL IN BEELD"
+        title="Kennismaken met Bommel & Bach"
+        description="Ontdek wie we zijn, hoe we werken en waarom we doen wat we doen"
+        thumbnailUrl="https://images.unsplash.com/photo-1760022638435-aad7c1e684b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWhpbmQlMjBzY2VuZXMlMjBkZXNpZ24lMjBzdHVkaW98ZW58MXx8fHwxNzYxNTkzNjc0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+        videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      />
 
       {/* Values Section */}
       <section className="w-full bg-sage-green/5 py-24">
@@ -432,8 +441,6 @@ export function OverOnsPage() {
           </div>
         </div>
       </section>
-
-      <FinalCTA />
     </>
   );
 }

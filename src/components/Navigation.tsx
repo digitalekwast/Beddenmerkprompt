@@ -123,8 +123,16 @@ export function Navigation() {
                 </Link>
               ))}
               <Link
+                to="/offerte-aanvraag"
+                className="mt-4 h-12 bg-sage-green text-warm-white rounded-xl flex items-center justify-center"
+                style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Vraag offerte aan
+              </Link>
+              <Link
                 to="/verkooppunten"
-                className="mt-4 h-12 bg-warm-taupe text-deep-charcoal rounded-xl flex items-center justify-center"
+                className="h-12 bg-warm-taupe text-deep-charcoal rounded-xl flex items-center justify-center"
                 style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >

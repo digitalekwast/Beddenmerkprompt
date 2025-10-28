@@ -1,6 +1,5 @@
 import { PageHeader } from '../components/PageHeader';
 import { ProductCard } from '../components/ProductCard';
-import { FinalCTA } from '../components/FinalCTA';
 
 export function HotelbeddenPage() {
   const products = [
@@ -90,6 +89,7 @@ export function HotelbeddenPage() {
         eyebrow="B2B PRODUCTEN"
         title="Hotelbed sets"
         description="Speciaal ontwikkeld voor de hospitality sector. Duurzame, comfortabele bedden die bestand zijn tegen intensief gebruik. Perfecte balans tussen kwaliteit en prijs voor hotels, B&B's en vakantiehuizen."
+        centered={true}
       />
 
       <section className="w-full bg-warm-white py-16">
@@ -137,8 +137,6 @@ export function HotelbeddenPage() {
           </div>
         </div>
       </section>
-
-      <FinalCTA />
     </>
   );
 }

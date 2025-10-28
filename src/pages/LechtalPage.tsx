@@ -1,7 +1,7 @@
 import { Check, Truck, Package, Clock } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
 import { ProductCard } from '../components/ProductCard';
-import { FinalCTA } from '../components/FinalCTA';
+import { ShowroomAppointment } from '../components/ShowroomAppointment';
 
 export function LechtalPage() {
   const products = [
@@ -70,6 +70,7 @@ export function LechtalPage() {
         eyebrow="COLLECTIE"
         title="Lechtal"
         description="Populaire boxsprings direct leverbaar. De Lechtal collectie combineert comfort met beschikbaarheid – perfect voor wie niet kan wachten. Standaard maten, direct uit voorraad."
+        centered={true}
       />
 
       {/* Benefits Section */}
@@ -188,7 +189,8 @@ export function LechtalPage() {
         </div>
       </section>
 
-      <FinalCTA />
+      {/* Showroom Appointment */}
+      <ShowroomAppointment />
     </>
   );
 }

@@ -1,6 +1,5 @@
 import { PageHeader } from '../components/PageHeader';
 import { Shield, Check, FileText, AlertCircle } from 'lucide-react';
-import { FinalCTA } from '../components/FinalCTA';
 
 export function GarantiePage() {
   const guaranteeItems = [
@@ -314,8 +313,6 @@ export function GarantiePage() {
           </div>
         </div>
       </section>
-
-      <FinalCTA />
     </>
   );
 }

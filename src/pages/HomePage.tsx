@@ -1,6 +1,7 @@
 import { Hero } from '../components/Hero';
 import { USPStrip } from '../components/USPStrip';
 import { BrandStory } from '../components/BrandStory';
+import { VideoShowcase } from '../components/VideoShowcase';
 import { CraftsmanshipGallery } from '../components/CraftsmanshipGallery';
 import { InteractiveConfigurator } from '../components/InteractiveConfigurator';
 import { ProductCategories } from '../components/ProductCategories';
@@ -9,7 +10,6 @@ import { VakmansschapSection } from '../components/VakmansschapSection';
 import { CollectiesOverview } from '../components/CollectiesOverview';
 import { Testimonials } from '../components/Testimonials';
 import { SocialProof } from '../components/SocialProof';
-import { FinalCTA } from '../components/FinalCTA';
 
 export function HomePage() {
   return (
@@ -22,6 +22,15 @@ export function HomePage() {
 
       {/* Brand Story - NEW: Benadrukt eigen merk met visuele rijkdom */}
       <BrandStory />
+
+      {/* Video Showcase - NEW: Premium video sectie */}
+      <VideoShowcase
+        eyebrow="ACHTER DE SCHERMEN"
+        title="Zo ontstaat een Bommel & Bach bed"
+        description="Van eerste schets tot eindproduct – ontdek hoe we met passie en oog voor detail elk bed ontwerpen"
+        thumbnailUrl="https://images.unsplash.com/photo-1760022638435-aad7c1e684b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiZWhpbmQlMjBzY2VuZXMlMjBkZXNpZ24lMjBzdHVkaW98ZW58MXx8fHwxNzYxNTkzNjc0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+        videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      />
 
       {/* Interactive Configurator Tool */}
       <InteractiveConfigurator />
@@ -81,9 +90,6 @@ export function HomePage() {
 
       {/* Social Proof */}
       <SocialProof />
-
-      {/* Final CTA */}
-      <FinalCTA />
     </>
   );
 }

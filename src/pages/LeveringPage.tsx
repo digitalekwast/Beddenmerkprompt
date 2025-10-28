@@ -1,6 +1,5 @@
 import { PageHeader } from '../components/PageHeader';
 import { Truck, Clock, Package, Check, MapPin } from 'lucide-react';
-import { FinalCTA } from '../components/FinalCTA';
 
 export function LeveringPage() {
   const deliverySteps = [
@@ -261,8 +260,6 @@ export function LeveringPage() {
           </div>
         </div>
       </section>
-
-      <FinalCTA />
     </>
   );
 }

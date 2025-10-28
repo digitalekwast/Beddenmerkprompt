@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { FileText } from 'lucide-react';
 
 interface ProductCardProps {
   id: string;
@@ -58,19 +59,19 @@ export function ProductCard({
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-4 md:p-6">
         {/* Collection */}
         <p
           className="text-sage-green uppercase mb-2"
-          style={{ fontSize: '12px', fontWeight: 500, letterSpacing: '1px', lineHeight: '12px' }}
+          style={{ fontSize: '11px', fontWeight: 500, letterSpacing: '1px', lineHeight: '12px' }}
         >
           {collection}
         </p>
 
         {/* Name */}
         <h3
-          className="text-deep-charcoal mb-4"
-          style={{ fontSize: '24px', fontWeight: 500, lineHeight: '32px' }}
+          className="text-deep-charcoal mb-3 md:mb-4"
+          style={{ fontSize: 'clamp(18px, 4vw, 24px)', fontWeight: 500, lineHeight: 'clamp(24px, 5vw, 32px)' }}
         >
           {name}
         </h3>
@@ -123,14 +124,23 @@ export function ProductCard({
         )}
 
         {/* CTA */}
-        <div className="mt-6 pt-4 border-t border-warm-taupe/20">
+        <div className="mt-6 pt-4 border-t border-warm-taupe/20 flex flex-col gap-2">
+          <Link
+            to="/offerte-aanvraag"
+            onClick={(e) => e.stopPropagation()}
+            className="h-12 px-5 bg-sage-green text-warm-white rounded-lg flex items-center justify-center gap-2 hover:bg-sage-green/90 transition-all"
+            style={{ fontSize: '15px', fontWeight: 500 }}
+          >
+            <FileText className="w-4 h-4" />
+            Plan showroom bezoek
+          </Link>
           <span
-            className="text-sage-green group-hover:text-sage-green/80 transition-colors inline-flex items-center gap-2"
-            style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '0.3px' }}
+            className="text-sage-green text-center transition-colors inline-flex items-center justify-center gap-2 py-1"
+            style={{ fontSize: '13px', fontWeight: 500, letterSpacing: '0.3px' }}
           >
             Bekijk details
             <svg
-              className="w-4 h-4 transition-transform group-hover:translate-x-1"
+              className="w-3 h-3 transition-transform group-hover:translate-x-1"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

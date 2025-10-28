@@ -2,7 +2,6 @@ import { Check } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
 import { ProductCard } from '../components/ProductCard';
 import { ShowroomAppointment } from '../components/ShowroomAppointment';
-import { FinalCTA } from '../components/FinalCTA';
 
 export function ValkveenPage() {
   const products = [
@@ -83,7 +82,8 @@ export function ValkveenPage() {
       <PageHeader
         eyebrow="EIGEN ONTWERP - COLLECTIE VALKEVEEN"
         title="Valkeveen"
-        description="In 5 stappen naar jouw droomboxspring. Door ons ontworpen en gemaakt in Staphorst. De Valkeveen collectie biedt voor iedereen wat wils, variërend van eenvoud tot luxe. Volledig configureerbaar volgens jouw wensen."
+        description="In 5 stappen naar jouw droomboxspring. Door ons ontworpen en ontwikkeld in Staphorst. De Valkeveen collectie biedt voor iedereen wat wils, variërend van eenvoud tot luxe. Volledig configureerbaar volgens jouw wensen."
+        centered={true}
       />
 
       {/* Configuration Process Section */}
@@ -108,7 +108,7 @@ export function ValkveenPage() {
               className="text-deep-charcoal/70 max-w-[600px] mx-auto"
               style={{ fontSize: '16px', fontWeight: 400, lineHeight: '26px' }}
             >
-              In vijf eenvoudige stappen stel je jouw perfecte, door ons gemaakte boxspring samen
+              In vijf eenvoudige stappen stel je jouw perfecte, door ons ontworpen boxspring samen
             </p>
           </div>
 
@@ -211,8 +211,6 @@ export function ValkveenPage() {
 
       {/* Showroom Appointment */}
       <ShowroomAppointment />
-
-      <FinalCTA />
     </>
   );
 }

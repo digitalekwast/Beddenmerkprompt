@@ -9,8 +9,8 @@ export function USPStrip() {
     },
     {
       icon: CheckCircle,
-      label: 'Eigen productie',
-      description: 'Handgemaakt in onze werkplaats in Staphorst',
+      label: 'Kwaliteitscontrole',
+      description: 'Persoonlijk geïnspecteerd volgens strikte eisen',
     },
     {
       icon: Award,
@@ -20,35 +20,37 @@ export function USPStrip() {
     {
       icon: Tag,
       label: 'Eerlijke prijs',
-      description: 'Direct van maker, geen tussenhandel',
+      description: 'Direct van ontwerper, geen tussenhandel',
     },
   ];
 
   return (
-    <section className="w-full bg-warm-white py-16">
-      <div className="max-w-[1200px] mx-auto px-16 md:px-16 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <section className="w-full bg-warm-white py-12 md:py-16 border-b border-warm-taupe/20">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
           {usps.map((usp, index) => {
             const Icon = usp.icon;
             return (
               <div key={index} className="text-center">
-                {/* Icon - Sage Green CRITICAL */}
-                <div className="flex justify-center mb-6">
-                  <Icon className="w-8 h-8 text-sage-green" strokeWidth={2} />
+                {/* Icon */}
+                <div className="flex justify-center mb-4">
+                  <div className="w-12 h-12 rounded-full bg-sage-green/10 flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-sage-green" />
+                  </div>
                 </div>
 
                 {/* Label */}
                 <h3
-                  className="text-deep-charcoal mb-3"
-                  style={{ fontSize: '16px', fontWeight: 500, lineHeight: '24px' }}
+                  className="text-deep-charcoal mb-2"
+                  style={{ fontSize: '15px', fontWeight: 600, lineHeight: '22px' }}
                 >
                   {usp.label}
                 </h3>
 
                 {/* Description */}
                 <p
-                  className="text-deep-charcoal/70 max-w-[280px] mx-auto"
-                  style={{ fontSize: '14px', fontWeight: 400, lineHeight: '22px' }}
+                  className="text-deep-charcoal/70 max-w-[240px] mx-auto"
+                  style={{ fontSize: '14px', fontWeight: 400, lineHeight: '21px' }}
                 >
                   {usp.description}
                 </p>

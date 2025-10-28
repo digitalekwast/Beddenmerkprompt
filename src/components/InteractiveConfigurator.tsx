@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { ArrowRight, Check, Star } from 'lucide-react';
+import { ArrowRight, Check, Star, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Slider } from './ui/slider';
 
 export function InteractiveConfigurator() {
@@ -359,13 +360,20 @@ export function InteractiveConfigurator() {
 
                 {/* Actions */}
                 <div className="space-y-3">
-                  <button className="w-full h-12 bg-sage-green text-warm-white rounded-lg flex items-center justify-center gap-2 hover:bg-[#7A9B7F] transition-all">
-                    <span style={{ fontSize: '15px', fontWeight: 500 }}>Bekijk dit bed</span>
+                  <Link 
+                    to="/offerte-aanvraag"
+                    className="w-full h-12 bg-sage-green text-warm-white rounded-lg flex items-center justify-center gap-2 hover:bg-[#7A9B7F] transition-all"
+                  >
+                    <FileText className="w-4 h-4" />
+                    <span style={{ fontSize: '15px', fontWeight: 500 }}>Plan showroom bezoek</span>
+                  </Link>
+                  <Link
+                    to="/collecties/valkeveen"
+                    className="w-full text-deep-charcoal hover:text-sage-green transition-colors flex items-center justify-center gap-1"
+                  >
+                    <span style={{ fontSize: '14px', fontWeight: 500 }}>Bekijk collectie</span>
                     <ArrowRight className="w-4 h-4" />
-                  </button>
-                  <button className="w-full text-deep-charcoal hover:text-sage-green transition-colors">
-                    <span style={{ fontSize: '14px', fontWeight: 500 }}>Zie meer opties</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
             )}

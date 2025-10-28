@@ -1,7 +1,6 @@
 import { PageHeader } from '../components/PageHeader';
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-import { FinalCTA } from '../components/FinalCTA';
 
 interface FAQItem {
   question: string;
@@ -193,23 +192,21 @@ export function FAQPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:[email protected]"
-              className="h-12 px-8 bg-warm-taupe text-deep-charcoal rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-[#B8A890] hover:shadow-md hover:translate-y-[-1px]"
-              style={{ fontWeight: 500, fontSize: '15px', letterSpacing: '0.3px' }}
+              className="h-14 px-10 bg-warm-taupe text-deep-charcoal rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-[#B8A890] hover:shadow-md hover:translate-y-[-1px]"
+              style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
             >
               Stuur een e-mail
             </a>
             <a
               href="tel:0522236040"
-              className="h-12 px-8 bg-deep-charcoal text-warm-white rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-deep-charcoal/90 hover:shadow-md hover:translate-y-[-1px]"
-              style={{ fontWeight: 500, fontSize: '15px', letterSpacing: '0.3px' }}
+              className="h-14 px-10 bg-deep-charcoal text-warm-white rounded-xl flex items-center justify-center transition-all duration-200 hover:bg-deep-charcoal/90 hover:shadow-md hover:translate-y-[-1px]"
+              style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
             >
               Bel ons: 0522-236040
             </a>
           </div>
         </div>
       </section>
-
-      <FinalCTA />
     </>
   );
 }

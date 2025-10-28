@@ -25,7 +25,7 @@ export function CraftsmanshipGallery() {
             className="text-deep-charcoal/70 max-w-[700px] mx-auto"
             style={{ fontSize: '18px', fontWeight: 400, lineHeight: '30px' }}
           >
-            Kwaliteit zit in de details. Zie hoe we met zorg en precisie elk bed met de hand maken.
+            Kwaliteit zit in de details. Ontdek hoe we met zorg en precisie elk bed tot in perfectie uitwerken.
           </p>
         </div>
 
@@ -45,13 +45,13 @@ export function CraftsmanshipGallery() {
                 className="text-warm-white/90 mb-2"
                 style={{ fontSize: '14px', fontWeight: 500, letterSpacing: '1px' }}
               >
-                HANDWERK
+                VAKMANSCHAP
               </p>
               <h3
                 className="text-warm-white"
                 style={{ fontSize: '28px', fontWeight: 700, lineHeight: '36px' }}
               >
-                Met de hand gestikt en afgewerkt
+                Vervaardigd volgens onze strikte eisen
               </h3>
             </div>
           </div>
@@ -140,7 +140,7 @@ export function CraftsmanshipGallery() {
                 className="text-deep-charcoal/70 mb-8"
                 style={{ fontSize: '16px', fontWeight: 400, lineHeight: '26px' }}
               >
-                Elk bed dat we maken is uniek. Niet omdat we het moeten, maar omdat we van ons vak houden en trots zijn op wat we doen.
+                Elk bed dat we ontwerpen is uniek. Niet omdat we het moeten, maar omdat we van ons vak houden en trots zijn op wat we creëren.
               </p>
               <a
                 href="/over-ons"

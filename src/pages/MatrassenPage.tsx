@@ -2,7 +2,6 @@ import { PageHeader } from '../components/PageHeader';
 import { MatrasConfigurator } from '../components/MatrasConfigurator';
 import { ProductCard } from '../components/ProductCard';
 import { ShowroomAppointment } from '../components/ShowroomAppointment';
-import { FinalCTA } from '../components/FinalCTA';
 
 export function MatrassenPage() {
   const matrassen = [
@@ -62,6 +61,7 @@ export function MatrassenPage() {
         title="Premium Matrassen"
         subtitle="Eigen ontworpen voor perfect slaapcomfort"
         imageUrl="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1200"
+        centered={true}
       />
 
       {/* Intro Section - Benadruk eigen ontwerpen */}
@@ -86,7 +86,7 @@ export function MatrassenPage() {
               className="text-deep-charcoal/70 max-w-[700px] mx-auto"
               style={{ fontSize: '18px', lineHeight: '30px' }}
             >
-              Elk matras is door ons zelf ontwikkeld en geproduceerd in Staphorst. Of je nu een losse matras zoekt of een matras voor je boxspring, wij hebben de
+              Elk matras is door ons zelf ontwikkeld en volgens onze specificaties vervaardigd. Of je nu een losse matras zoekt of een matras voor je boxspring, wij hebben de
               perfecte oplossing. Allemaal gemaakt met Nederlands vakmanschap en premium materialen.
             </p>
           </div>
@@ -172,8 +172,6 @@ export function MatrassenPage() {
 
       {/* Showroom Appointment */}
       <ShowroomAppointment />
-
-      <FinalCTA />
     </div>
   );
 }

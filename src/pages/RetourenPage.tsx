@@ -1,6 +1,5 @@
 import { PageHeader } from '../components/PageHeader';
 import { RotateCcw, Check, AlertTriangle, Calendar } from 'lucide-react';
-import { FinalCTA } from '../components/FinalCTA';
 
 export function RetourenPage() {
   const returnConditions = [
@@ -287,15 +286,13 @@ export function RetourenPage() {
           </p>
           <a
             href="mailto:[email protected]"
-            className="inline-flex h-12 px-8 bg-warm-taupe text-deep-charcoal rounded-xl items-center justify-center transition-all duration-200 hover:bg-[#B8A890] hover:shadow-md hover:translate-y-[-1px]"
-            style={{ fontWeight: 500, fontSize: '15px', letterSpacing: '0.3px' }}
+            className="inline-flex h-14 px-10 bg-warm-taupe text-deep-charcoal rounded-xl items-center justify-center transition-all duration-200 hover:bg-[#B8A890] hover:shadow-md hover:translate-y-[-1px]"
+            style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
           >
             Stuur een e-mail
           </a>
         </div>
       </section>
-
-      <FinalCTA />
     </>
   );
 }

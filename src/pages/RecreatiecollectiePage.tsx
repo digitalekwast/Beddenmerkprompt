@@ -1,7 +1,6 @@
 import { Check, Building2, Shield, Cog } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
 import { ProductCard } from '../components/ProductCard';
-import { FinalCTA } from '../components/FinalCTA';
 
 export function RecreatiecollectiePage() {
   const products = [
@@ -69,6 +68,7 @@ export function RecreatiecollectiePage() {
         eyebrow="B2B COLLECTIE"
         title="Recreatie"
         description="Speciaal ontwikkeld voor hotels, B&B's en de recreatiebranche. Duurzame bedden die bestand zijn tegen intensief gebruik, tegen een eerlijke B2B prijs."
+        centered={true}
       />
 
       {/* B2B Benefits */}
@@ -191,13 +191,13 @@ export function RecreatiecollectiePage() {
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="h-12 px-8 bg-warm-taupe text-deep-charcoal rounded-lg flex items-center justify-center transition-all duration-200 hover:bg-[#B8A890]"
+              className="h-14 px-10 bg-warm-taupe text-deep-charcoal rounded-lg flex items-center justify-center transition-all duration-200 hover:bg-[#B8A890]"
               style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
             >
               Offerte aanvragen
             </a>
             <button
-              className="h-12 px-8 border-2 border-warm-white text-warm-white rounded-lg flex items-center justify-center transition-all duration-200 hover:bg-warm-white hover:text-deep-charcoal"
+              className="h-14 px-10 border-2 border-warm-white text-warm-white rounded-lg flex items-center justify-center transition-all duration-200 hover:bg-warm-white hover:text-deep-charcoal"
               style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
             >
               Login zakelijk
@@ -231,8 +231,6 @@ export function RecreatiecollectiePage() {
           </div>
         </div>
       </section>
-
-      <FinalCTA />
     </>
   );
 }

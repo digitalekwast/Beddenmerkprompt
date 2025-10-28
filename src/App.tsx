@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
+import { ScrollToTop } from './components/ScrollToTop';
 import { HomePage } from './pages/HomePage';
 import { BoxspringsPage } from './pages/BoxspringsPage';
 import { MatrassenPage } from './pages/MatrassenPage';
@@ -16,10 +17,12 @@ import { FAQPage } from './pages/FAQPage';
 import { LeveringPage } from './pages/LeveringPage';
 import { GarantiePage } from './pages/GarantiePage';
 import { RetourenPage } from './pages/RetourenPage';
+import { OfferteAanvraagPage } from './pages/OfferteAanvraagPage';
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-warm-white">
         <Navigation />
         
@@ -39,6 +42,7 @@ export default function App() {
           <Route path="/levering" element={<LeveringPage />} />
           <Route path="/garantie" element={<GarantiePage />} />
           <Route path="/retouren" element={<RetourenPage />} />
+          <Route path="/offerte-aanvraag" element={<OfferteAanvraagPage />} />
           
           {/* Catch-all route - redirects to home */}
           <Route path="*" element={<Navigate to="/" replace />} />

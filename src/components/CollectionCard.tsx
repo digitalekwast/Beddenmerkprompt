@@ -1,4 +1,5 @@
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface CollectionCardProps {
   imageUrl: string;
@@ -71,15 +72,25 @@ export function CollectionCard({
           ))}
         </div>
 
-        {/* CTA Link */}
-        <a
-          href={ctaHref}
-          className="inline-flex items-center gap-2 text-deep-charcoal hover:text-warm-taupe transition-colors duration-200 mt-auto"
-          style={{ fontSize: '16px', fontWeight: 400, lineHeight: '16px' }}
-        >
-          {ctaText}
-          <ArrowRight className="w-4 h-4" />
-        </a>
+        {/* CTA Buttons */}
+        <div className="flex flex-col gap-2 pt-2 border-t border-warm-taupe/10">
+          <Link
+            to="/offerte-aanvraag"
+            className="h-12 px-5 bg-sage-green text-warm-white rounded-lg inline-flex items-center justify-center gap-2 transition-all duration-200 hover:bg-sage-green/90"
+            style={{ fontSize: '15px', fontWeight: 500 }}
+          >
+            <FileText className="w-4 h-4" />
+            Plan showroom bezoek
+          </Link>
+          <a
+            href={ctaHref}
+            className="inline-flex items-center justify-center gap-2 text-sage-green hover:text-sage-green/80 transition-colors duration-200 py-2"
+            style={{ fontSize: '14px', fontWeight: 500 }}
+          >
+            {ctaText}
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
       </div>
     </div>
   );

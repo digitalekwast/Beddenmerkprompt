@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { MapPin, Phone, Clock, ExternalLink, TrendingUp, Users, Award, Building2, Heart, Sparkles, Search, X } from 'lucide-react';
+import { MapPin, Phone, Clock, ExternalLink, TrendingUp, Users, Award, Building2, Heart, Sparkles, Search, X, Send } from 'lucide-react';
 import { PageHeader } from '../components/PageHeader';
+import { DealerContactModal } from '../components/DealerContactModal';
 
 export function VerkooppuntenPage() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedDealer, setSelectedDealer] = useState<typeof dealers[0] | null>(null);
 
   const dealers = [
     {
@@ -163,7 +165,7 @@ export function VerkooppuntenPage() {
               </div>
               <a
                 href="/contact"
-                className="inline-flex h-12 px-8 bg-warm-taupe text-deep-charcoal rounded-xl items-center justify-center transition-all duration-200 hover:bg-[#B8A890] hover:shadow-md hover:translate-y-[-1px]"
+                className="inline-flex h-14 px-10 bg-warm-taupe text-deep-charcoal rounded-xl items-center justify-center transition-all duration-200 hover:bg-[#B8A890] hover:shadow-md hover:translate-y-[-1px]"
                 style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
               >
                 Plan showroom bezoek
@@ -320,14 +322,14 @@ export function VerkooppuntenPage() {
                   </div>
                 </div>
 
-                <a
-                  href={`mailto:${dealer.email}`}
+                <button
+                  onClick={() => setSelectedDealer(dealer)}
                   className="inline-flex items-center gap-2 text-sage-green hover:text-warm-taupe transition-colors"
                   style={{ fontSize: '14px', fontWeight: 500 }}
                 >
                   Contact opnemen
-                  <ExternalLink className="w-3 h-3" />
-                </a>
+                  <Send className="w-3 h-3" />
+                </button>
               </div>
             ))}
           </div>
@@ -522,13 +524,22 @@ export function VerkooppuntenPage() {
           </p>
           <a
             href="/contact"
-            className="inline-flex h-12 px-8 bg-warm-taupe text-deep-charcoal rounded-xl items-center justify-center transition-all duration-200 hover:bg-[#B8A890] hover:shadow-md hover:translate-y-[-1px]"
+            className="inline-flex h-14 px-10 bg-warm-taupe text-deep-charcoal rounded-xl items-center justify-center transition-all duration-200 hover:bg-[#B8A890] hover:shadow-md hover:translate-y-[-1px]"
             style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
           >
             Word dealer
           </a>
         </div>
       </section>
+
+      {/* Dealer Contact Modal */}
+      {selectedDealer && (
+        <DealerContactModal
+          dealer={selectedDealer}
+          isOpen={selectedDealer !== null}
+          onClose={() => setSelectedDealer(null)}
+        />
+      )}
     </>
   );
 }

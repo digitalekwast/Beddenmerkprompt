@@ -1,4 +1,5 @@
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface FeaturedCollectionProps {
   imageUrl: string;
@@ -84,15 +85,25 @@ export function FeaturedCollection({
               ))}
             </div>
 
-            {/* CTA Button */}
-            <a
-              href={ctaHref}
-              className="h-12 px-8 bg-warm-taupe text-deep-charcoal rounded-lg inline-flex items-center justify-center gap-2 transition-all duration-200 hover:bg-[#B8A890] hover:shadow-md hover:scale-[1.02]"
-              style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
-            >
-              {ctaText}
-              <ArrowRight className="w-5 h-5" />
-            </a>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                to="/offerte-aanvraag"
+                className="h-14 px-8 bg-sage-green text-warm-white rounded-lg inline-flex items-center justify-center gap-2 transition-all duration-200 hover:bg-sage-green/90 hover:shadow-md hover:scale-[1.02]"
+                style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
+              >
+                <FileText className="w-5 h-5" />
+                Plan showroom bezoek
+              </Link>
+              <a
+                href={ctaHref}
+                className="h-14 px-8 border-2 border-sage-green text-sage-green rounded-lg inline-flex items-center justify-center gap-2 transition-all duration-200 hover:bg-sage-green hover:text-warm-white"
+                style={{ fontWeight: 500, fontSize: '16px', letterSpacing: '0.3px' }}
+              >
+                {ctaText}
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
